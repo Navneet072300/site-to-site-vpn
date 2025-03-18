@@ -42,7 +42,7 @@ resource "aws_security_group" "customer_securitygrp" {
 resource "aws_instance" "customer_linux" {
   ami           = data.aws_ssm_parameter.amazon_linux_2.value
   instance_type = "t2.micro"
-  key_name = "mykey1"
+  key_name = "keypair"
   
 
   tags = {
